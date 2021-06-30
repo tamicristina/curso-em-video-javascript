@@ -13,13 +13,15 @@
     </header>
     <section>
       <div>
-        <p>Inicio: <input type="number" id="inicio" /></p>
+        <p>Inicio: <input type="number" id="inicio" min="0" /></p>
         <p>Fim: <input type="number" id="fim" /></p>
-        <p>Passo: <input type="number" id="fim" /></p>
-        <p><input type="button" value="Contar" /></p>
+        <p>Passo: <input type="number" id="passo" /></p>
+        <p><input type="button" value="Contar" onclick="contar()" /></p>
       </div>
 
-      <div id="res"></div>
+      <div id="res">
+        <p>Preparando contagem...</p>
+      </div>
     </section>
     <footer>
       <p>&copy; CursoemVideo</p>
