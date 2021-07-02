@@ -1,7 +1,7 @@
 # Curso de JavaScript - Curso em Vídeo
 
-## Hora do dia
+## Vamos Contas
 
-### Exercício proposto no Curso em vídeo, com o objetivo de alterar as imagens dinamicamente de acordo com a hora.
+### Exercício proposto no Curso em vídeo, de fazer uma contagem de acordo com os dados inseridos no input.
 
 <img src="img/imagemprojeto.PNG" alt="ImgProjeto" />
