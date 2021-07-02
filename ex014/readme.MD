@@ -1,6 +1,6 @@
 # Curso de JavaScript - Curso em Vídeo
 
-## Vamos Contas
+## Vamos Contar
 
 ### Exercício proposto no Curso em vídeo, de fazer uma contagem de acordo com os dados inseridos no input.
 
