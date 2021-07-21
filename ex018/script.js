@@ -27,32 +27,40 @@ function adicionar() {
     let numeroLista = document.createElement("option");
     numeroLista.text = `Valor ${numero.value} adicionado`;
     listatxt.appendChild(numeroLista);
+    resposta.innerHTML = "";
   } else {
     window.alert("Valor inválido ou já encontrado na lista");
   }
 
   numero.value = "";
   numero.focus();
+}
 
-  //   let numero = Number(numerotxt.value);
-  //   let numeroLista = document.createElement("option");
+function finalizar() {
+  if (listaArray.length == 0) {
+    window.alert("Adicione valores antes de finalizar");
+  } else {
+    let tot = listaArray.length;
+    let maior = listaArray[0];
+    let menor = listaArray[0];
+    soma = 0;
+    media = 0;
 
-  //   if (numero > 100) {
-  //     window.alert("Valor inválido ou já encontrado na lista");
-  //   }
-  //   if (numero == 0) {
-  //     // window.alert("Valor inválido ou já encontrado na lista");
-  //   }
-  //   if (numero >= 1 && numero <= 100) {
-  //     numeroLista.text = `Valor ${numero} adicionado`;
-  //     listatxt.appendChild(numeroLista);
-  //     listaArray.push(numero);
-  //   }
-
-  //   btnFinalizar.addEventListener("click", function () {
-  //     let soma = 0;
-  //     for (i = 0; i <= listaArray.length; i++) {
-  //       resposta.innerHTML = `Ao todo, temos ${listaArray.length} números cadastrados`;
-  //     }
-  //   });
+    for (pos in listaArray) {
+      soma += listaArray[pos];
+      if (listaArray[pos] > maior) {
+        maior = listaArray[pos];
+      }
+      if (listaArray[pos] < menor) {
+        menor = listaArray[pos];
+      }
+    }
+    media = soma / tot;
+    resposta.innerHTML = "";
+    resposta.innerHTML += `<p>Ao todo temos ${tot} números cadastrados.<p>`;
+    resposta.innerHTML += `<p>O maior valor informado foi ${maior}.`;
+    resposta.innerHTML += `<p>O menor valor informado foi ${menor}.`;
+    resposta.innerHTML += `<p>Somando todos os valores temos ${soma}.`;
+    resposta.innerHTML += `<p>A média dos valores digitados é ${media}.`;
+  }
 }
